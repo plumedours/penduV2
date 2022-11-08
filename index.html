@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le jeu du Pendu</title>
+    <link rel="icon" type="image/ico" href="./img/hangman_7.png" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Le pendu</h1>
+        <p>Trouvez le mot caché !</p>
+      </header>
+      <div class="content">
+        <div class="infos-content">
+          <div class="infos">
+            <div class="infos-items">
+              <p class="infos-text">Mot à trouver :</p>
+              <p id="findWord">_ _ _ _ _ _ _ _ _</p>
+            </div>
+            <div class="infos-items">
+              <p class="infos-text">Nombre d'essais :</p>
+              <p id="wrongLabel">7</p>
+            </div>
+          </div>
+          <div class="img-container">
+            <img id="penduImg" src="./img/hangman_0.png" alt="" />
+          </div>
+        </div>
+        <button id="newGameBtn" class="btn btn-primary">
+          Nouvelle partie
+        </button>
+        <div id="keyboard" class="keyboard">
+          <button class="letter btn btn-primary" type="button">A</button
+          ><button class="letter btn btn-primary" type="button">B</button
+          ><button class="letter btn btn-primary" type="button">C</button
+          ><button class="letter btn btn-primary" type="button">D</button
+          ><button class="letter btn btn-primary" type="button">E</button
+          ><button class="letter btn btn-primary" type="button">F</button
+          ><button class="letter btn btn-primary" type="button">G</button
+          ><button class="letter btn btn-primary" type="button">H</button
+          ><button class="letter btn btn-primary" type="button">I</button
+          ><button class="letter btn btn-primary" type="button">J</button
+          ><button class="letter btn btn-primary" type="button">K</button
+          ><button class="letter btn btn-primary" type="button">L</button
+          ><button class="letter btn btn-primary" type="button">M</button
+          ><button class="letter btn btn-primary" type="button">N</button
+          ><button class="letter btn btn-primary" type="button">O</button
+          ><button class="letter btn btn-primary" type="button">P</button
+          ><button class="letter btn btn-primary" type="button">Q</button
+          ><button class="letter btn btn-primary" type="button">R</button
+          ><button class="letter btn btn-primary" type="button">S</button
+          ><button class="letter btn btn-primary" type="button">T</button
+          ><button class="letter btn btn-primary" type="button">U</button
+          ><button class="letter btn btn-primary" type="button">V</button
+          ><button class="letter btn btn-primary" type="button">W</button
+          ><button class="letter btn btn-primary" type="button">X</button
+          ><button class="letter btn btn-primary" type="button">Y</button
+          ><button class="letter btn btn-primary" type="button">Z</button>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>
+          Jeu du Pendu, par Maxime Bory -
+          <a href="https://www.plumedours.fr" target="_blank"
+            >www.plumedours.fr</a
+          >
+        </p>
+      </footer>
+      <div class="modal-container">
+        <div class="overlay"></div>
+        <div class="modal">
+          <p class="winOrLoseLabel infos-text">Win or Lose</p>
+          <p class="wordResponse infos-text">Response</p>
+          <button id="replayBtn" class="modal-trigger btn btn-primary">REJOUER</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
